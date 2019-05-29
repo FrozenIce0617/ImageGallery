@@ -1,0 +1,9 @@
+$navbar-height: 50px;
+$navbar-default-color: red;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.logo {
+  display: inline;
+}
