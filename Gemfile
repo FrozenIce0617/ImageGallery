@@ -66,3 +66,5 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 # Use jQuery
 gem 'jquery-rails'
+# Use Devise for Authentication
+gem 'devise', '~> 4.6', '>= 4.6.2'
