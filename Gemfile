@@ -68,3 +68,5 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 # Use Devise for Authentication
 gem 'devise', '~> 4.6', '>= 4.6.2'
+# Prettier
+gem 'prettier'

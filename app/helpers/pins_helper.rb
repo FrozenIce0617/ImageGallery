@@ -1,2 +1,1 @@
-module PinsHelper
-end
+module PinsHelper; end
