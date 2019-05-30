@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <%= link_to 'Logo', root_path, class: 'navbar-brand' %>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
@@ -18,6 +18,9 @@
           <%= link_to "About", home_about_path %>
         </li>
         <% if user_signed_in?%>
+          <li>
+            <%= link_to 'List Pins', pins_path %>
+          </li>
           <li>
             <%= link_to 'Edit profile', edit_user_registration_path %>
           </li>

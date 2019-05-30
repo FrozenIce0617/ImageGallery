@@ -4,8 +4,9 @@
   <hr class="my-4">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <% if user_signed_in? %>
-    <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-default btn-lg" %>
     <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-primary btn-lg", method: :delete %>
+    <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-default btn-lg" %>
+    <%= link_to 'List Pins', pins_path, class: "btn btn-default btn-lg" %>
   <% else %>
     <%= link_to 'Login', new_user_session_path, class: "btn btn-default btn-lg" %>
     <%= link_to 'Join', new_user_registration_path, class: "btn btn-primary btn-lg" %>    
