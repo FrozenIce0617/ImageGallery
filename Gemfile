@@ -76,3 +76,7 @@ gem 'paperclip', '~> 6.1'
 gem 'jquery-turbolinks', '~> 2.1'
 # masonry rails
 gem 'masonry-rails', '~> 0.2.4'
+# pagination gem
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
+# Use bootstrap for pagination bar
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
