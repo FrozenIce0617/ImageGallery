@@ -2,22 +2,27 @@
 
 <h1>Pins</h1>
 
-<div id="pins">
+<div id="pins" class="transitions-enabled">
 <% @pins.each do |pin| %>
   <div class="box">
-    <%= image_tag pin.image.url(:medium) %><br />
-    <%= pin.description %><br />
-    <%= pin.user.email if pin.user %><br />
-    <%= link_to 'Show', pin %>
-    <% if current_user == pin.user %>
-      <%= link_to 'Edit', edit_pin_path(pin) %>
-      <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
-    <br />
+    <div class="panel panel-default">
+      <%= image_tag pin.image.url(:medium) %><br />
+      <div class="panel-body">
+        <%= pin.description %><br />
+        <strong><%= pin.user.email if pin.user %></strong><br />
+      </div>
+      <div class="panel-footer">
+        <%= link_to 'Show', pin %>
+        <% if current_user == pin.user %>
+          <%= link_to 'Edit', edit_pin_path(pin) %>
+          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        <br />
+      </div>
+    </div>
   </div>
 <% end %>
 </div>
-
 <br>
 
 <%= link_to 'New Pin', new_pin_path %>
