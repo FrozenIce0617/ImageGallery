@@ -2,8 +2,9 @@
 
 <h1>Pins</h1>
 
+<div id="pins">
 <% @pins.each do |pin| %>
-  <div id="pins">
+  <div class="box">
     <%= image_tag pin.image.url(:medium) %><br />
     <%= pin.description %><br />
     <%= pin.user.email if pin.user %><br />
@@ -15,6 +16,7 @@
     <br />
   </div>
 <% end %>
+</div>
 
 <br>
 
