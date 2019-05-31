@@ -2,27 +2,16 @@
 
 <h1>Pins</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pins.each do |pin| %>
-      <tr>
-        <td><%= image_tag pin.image.url(:medium) %></td>
-        <td><%= pin.description %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @pins.each do |pin| %>
+  <%= image_tag pin.image.url(:medium) %><br />
+  <%= pin.description %><br />
+  <%= pin.user.email if pin.user %><br />
+  <%= link_to 'Show', pin %>
+  <% if current_user == pin.user %>
+    <%= link_to 'Edit', edit_pin_path(pin) %>
+    <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
 
 <br>
 
