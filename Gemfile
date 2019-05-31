@@ -70,3 +70,5 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 # Prettier
 gem 'prettier'
+# Paperclip for upload
+gem 'paperclip', '~> 6.1'
