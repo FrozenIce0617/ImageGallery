@@ -67,7 +67,7 @@ gem 'sassc-rails', '>= 2.1.0'
 # Use jQuery
 gem 'jquery-rails'
 # Use Devise for Authentication
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 # Prettier
 gem 'prettier'
 # Paperclip for upload
